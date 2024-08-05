@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/newTree/static/css/main.91db8c2d.css",
+    "main.js": "/newTree/static/js/main.b72f0f46.js",
+    "static/js/453.c178bb28.chunk.js": "/newTree/static/js/453.c178bb28.chunk.js",
+    "index.html": "/newTree/index.html",
+    "main.91db8c2d.css.map": "/newTree/static/css/main.91db8c2d.css.map",
+    "main.b72f0f46.js.map": "/newTree/static/js/main.b72f0f46.js.map",
+    "453.c178bb28.chunk.js.map": "/newTree/static/js/453.c178bb28.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.91db8c2d.css",
+    "static/js/main.b72f0f46.js"
+  ]
+}
