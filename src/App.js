@@ -53,7 +53,20 @@ const App = () => {
     },
   ]);
 
-
+  const updateParentCheckStatus = (nodes) => {
+    return nodes.map((node) => {
+      if (node.children) {
+        const updatedChildren = updateParentCheckStatus(node.children);
+        const allChecked = updatedChildren.every(child => child.checked);
+        return {
+          ...node,
+          checked: allChecked,
+          children: updatedChildren,
+        };
+      }
+      return node;
+    });
+  };
 
   const handleCheck = (key, isChecked) => {
     const recursiveCheckUpdate = (nodes, key, isChecked) => {
@@ -72,7 +85,8 @@ const App = () => {
       });
     };
 
-    setTreeData(recursiveCheckUpdate(treeData, key, isChecked));
+    const updatedTreeData = recursiveCheckUpdate(treeData, key, isChecked);
+    setTreeData(updateParentCheckStatus(updatedTreeData));
   };
 
   return (
