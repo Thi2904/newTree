@@ -1,9 +1,9 @@
 import { useState } from "react";
 import './App.scss';
 
-
 const TreeNode = ({ node, onCheck, parentChecked }) => {
     const [expanded, setExpanded] = useState(false);
+  
     const handleToggle = () => {
       setExpanded(!expanded);
     };
@@ -24,13 +24,13 @@ const TreeNode = ({ node, onCheck, parentChecked }) => {
   
     return (
       <li>
-        <div style={{ cursor: 'pointer', marginLeft: '5px', display: 'flex' }}>
+        <div className="buttonExpand" >
           {node.children && node.children.length > 0 && (
             <span onClick={handleToggle}>
               {expanded ? (
-                <i style={{ display: 'block', marginBottom: '3px' }} className="fa-solid fa-sort-down"></i>
+                <i className="fa-solid fa-sort-down"></i>
               ) : (
-                <i style={{ display: 'block', marginTop: '3px' }} className="fa-solid fa-caret-right"></i>
+                <i className="fa-solid fa-caret-right"></i>
               )}
             </span>
           )}
